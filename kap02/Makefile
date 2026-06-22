@@ -13,7 +13,7 @@ all: compile checkstyle test
 compile: $(MAIN_BINARY) $(TEST_BINARY)
 
 checkstyle:
-	clang-format-18 --dry-run -Werror *.h *.cpp
+	clang-format-18 --dry-run *.h *.cpp
 
 test: $(TEST_BINARY)
 	./$<

@@ -1,11 +1,15 @@
 #include "./Betrag.h"
-
-template <typename T> const char *betrag(T) { return "Nicht sinnvoller Typ!"; };
-template <> const char *betrag<int>(int t) {
+#include <iostream>
+template <typename T> T betrag(T t) {
   if (t < 0) {
     t *= (-1);
-    return (const char *)t;
+    return t;
   } else {
-    return (const char *)t;
+    return t;
   }
+}
+
+template <> char betrag<char>(char t) {
+  std::cout << "not allowed type!" << "\n";
+  return t;
 }

@@ -10,4 +10,6 @@ int main() {
   std::cout << gettype(k) << "\n";
   bool l = false;
   std::cout << gettype(l) << "\n";
+  float m = 0;
+  std::cout << gettype(m) << "\n";
 }
